@@ -1,111 +1,44 @@
-body {
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans:wght@100;300&display=swap');
-  margin: 0px;
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Work Sans', sans-serif;
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&display=swap');
+
+html
+{
+  background-color: #000000;
 }
 
-#header {
-  display: flex;
-  justify-content: space-between;
-  background-color: #333;
-  color: white;
-  padding: 20px;
-}
-
-#header a {
-  text-decoration: none;
-  color: white;
-}
-
-#header a:nth-child(2) {
-  margin: 0 auto;
-}
-
-#right {
-  margin-right: 10px;
-}
-
-.repo {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 16px;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.repo:hover {
-  transform: scale(1.05);
-}
-
-.repo h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.repo p {
-  color: #555;
-}
-
-.repo a {
-  display: block;
-  color: #0366d6;
-  text-decoration: none;
-  margin-top: 8px;
-}
-
-.repo a:hover {
-  text-decoration: underline;
-}
-
-#repo-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-#content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body{
+  background-color: hsl(0, 0%, 98%);
+  font-family: 'IBM Plex Mono', monospace;
+  width: 100vw;
   height: 100vh;
+  background-size: cover;  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url(/static/images/juanjo-jaramillo-mZnx9429i94-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
 }
 
-.about {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  margin: auto;
-  height: 50vh;
-  width: 30vw;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  flex-direction: column;
+
+#repo-list .column .box
+{
+  min-height: 220px;
+  transition: all .3s ease-in-out;
 }
 
-.about:hover {
-  transform: scale(1.05);
+#repo-list .column .box:hover
+{
+  transform: scale(0.95);
 }
 
-.about-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+main {
+  margin: 40px 0;
 }
 
-.about img {
-  width: 100px; /* Ensure the image doesn't exceed the width of its container */
-  border-radius: 8px; /* Optional: Add rounded corners to the image */
-  margin-right: 20px;
+
+.border-right{
+  border-right: 1px solid #a8a8a8;
 }
 
-.about-text {
-  margin-top: 20px; /* Adjust as needed for spacing between image and text */
+.border-left{
+  border-left: 1px solid #a8a8a8;
 }

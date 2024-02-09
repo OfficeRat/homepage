@@ -7,24 +7,32 @@ fetch(`https://api.github.com/users/OfficeRat/repos`)
   })
   .catch(error => console.error('Error fetching repositories:', error));
 
-function createRepoElement(repo) {
+  function createRepoElement(repo) {
     const repoList = document.getElementById('repo-list');
-  
-    const repoElement = document.createElement('div');
-    repoElement.classList.add('repo');
-  
+
+    const column = document.createElement('div');
+    column.classList.add('column', 'is-one-third');
+
+    const box = document.createElement('div');
+    box.classList.add('is-clickable','box', 'has-background-info-dark','has-text-white');
+
     const repoName = document.createElement('h3');
+    repoName.classList.add('is-capitalized','title', 'is-size-4','has-text-white'); 
     repoName.textContent = repo.name;
-  
+
     const repoDescription = document.createElement('p');
     repoDescription.textContent = repo.description || 'No description available.';
 
-    repoElement.addEventListener('click', () => {
-      window.open(repo.html_url, '_blank');
+    box.appendChild(repoName);
+    box.appendChild(repoDescription);
+
+    box.addEventListener('click', () => {
+        window.open(repo.html_url, '_blank');
     });
-  
-    repoElement.appendChild(repoName);
-    repoElement.appendChild(repoDescription);
-  
-    repoList.appendChild(repoElement);
-  }
+
+    column.appendChild(box);
+
+    repoList.appendChild(column);
+}
+
+
