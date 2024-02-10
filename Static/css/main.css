@@ -39,6 +39,7 @@ main {
   border-right: 1px solid #a8a8a8;
 }
 
-.border-left{
-  border-left: 1px solid #a8a8a8;
+a.navbar-item:hover {
+  background-color: #202031;
+  border-radius: 7%;
 }

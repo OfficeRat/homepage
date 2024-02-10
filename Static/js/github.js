@@ -14,7 +14,8 @@ fetch(`https://api.github.com/users/OfficeRat/repos`)
     column.classList.add('column', 'is-one-third');
 
     const box = document.createElement('div');
-    box.classList.add('is-clickable','box', 'has-background-info-dark','has-text-white');
+    box.classList.add('is-clickable','box','has-text-white');
+    box.style.backgroundColor = "#354D66";
 
     const repoName = document.createElement('h3');
     repoName.classList.add('is-capitalized','title', 'is-size-4','has-text-white'); 
