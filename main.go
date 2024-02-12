@@ -55,7 +55,7 @@ func setupRoutes() *http.ServeMux {
 func main() {
 	mux := setupRoutes()
 
-	PORT := ":23424"
+	PORT := ":23423"
 	fmt.Printf("Server started on http://localhost%s\n", PORT)
 
 	err := http.ListenAndServe(PORT, mux)

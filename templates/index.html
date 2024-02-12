@@ -18,12 +18,17 @@
   <nav class="navbar py-2 px-5" role="navigation" aria-label="main navigation" style="background-color: #171723;">
     <div class="navbar-brand">
       <a class="navbar-item" href="/">
-        <img src="/static/images/logo.png" width="200" height="60" class="logo">
+        <img src="/static/images/logo.png" style="-webkit-filter: invert(100%); filter: invert(100%);" width="200" height="60" class="logo">
+      </a>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
     </div>
 
 
-    <div class="navbar-menu " id="navMenu">
+    <div class="navbar-menu " id="navMenu" style="background-color: #171723;">
       <div class="navbar-end is-size-6 has-text-weight-medium">
         <a href="/" class="navbar-item has-text-white">
           Home
